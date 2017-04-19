@@ -1,0 +1,145 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2017, 8:03:59 AM
+    Author     : antonhallstrom
+*/
+body {
+   background: #FAFAFA;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-bottom: 80px;
+}
+
+.book-table {
+    width: 100%;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-family: 'Open Sans';
+    border-spacing: 0;
+    border-radius: 2px;
+    background: #FFFFFF;
+}
+
+.book-table--edit {
+    width: 50%;
+}
+.book-table__row {
+    background: #F8F8F8;
+    border: 0;
+    margin: 0;
+   
+    
+} 
+
+a {
+    text-decoration: none;
+    color: #757575;
+}
+
+
+
+th {
+    text-align: left;
+    padding: 16px;
+    color: #747474;
+    border: 0;
+    margin: 0; 
+    background: #FFFFFF;
+    border-bottom: 1px solid #BBBBBB;
+    font-family: 'Lato';
+    font-weight: 700;
+    border-top: 1px solid #BBBBBB;
+}
+
+td {
+    background: #FFFFFF;
+    border: 0;
+    padding: 16px;
+    border-bottom: 1px solid #BBBBBB;
+    color: #404040;
+    font-family: 'Open Sans';
+
+}
+
+
+
+.btn {
+    font-family: 'Open Sans';
+    margin-top: 24px;
+    margin-bottom: 24px; 
+    
+}
+.btn--link {
+    font-family: 'Open Sans';
+    text-decoration: none;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 500;
+    color: #F8F8F8;
+    background: #02B875;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+}
+
+.btn--warning {
+  background: crimson;
+
+}
+
+.btn--edit {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btn-update {
+    border: 0;
+}
+
+.book-table__title {
+    border: 0;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 18px;
+}
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  color: #747474;
+  border: none;
+  border-radius: 4px;
+  background: #FAFAFA;
+  border: 1px solid #BBBBBB;
+} 
+
+select:focus {
+  outline: none;
+
+}
+
+textarea {
+  border: 1px solid #BBBBBB;
+  border-radius: 2px;
+  padding: 8px;
+  color: #404040;
+
+}
+
+optgroup {
+    width: 100%;
+}
+
+.msg-success {
+    color: #02B875;
+    font-family: 'Open Sans';
+}
+
+
+
+
