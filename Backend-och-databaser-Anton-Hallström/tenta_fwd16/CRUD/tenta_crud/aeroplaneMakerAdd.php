@@ -4,10 +4,9 @@ include_once("config.php");
 
 session_start();
 if(empty($_SESSION['email']))
-{
+{ 
  header("location:index.php");
-}
-
+} 
 echo "Welcome ".$_SESSION['name'];
 
 if(isset($_POST['Submit'])) {    

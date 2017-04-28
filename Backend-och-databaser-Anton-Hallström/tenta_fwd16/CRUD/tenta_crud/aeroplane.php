@@ -1,6 +1,6 @@
  <?php
     include_once("config.php");
-    
+     
     session_start();
     
     if(empty($_SESSION['email'])) {
@@ -41,7 +41,7 @@
         echo "<td>".$row['aeroplaneName']."</td>";
         echo "<td>".$row['aeroplaneTopSpeed']."</td>";
         echo "<td>".$row['aeroplaneRange']."</td>";
-        echo "<td><a  href=\"aeroplaneEdit.php?id=$row[planeMakerID]\">Edit</a>  <a class='btn--danger' href=\"aeroplaneDelete.php?id=$row[aeroplaneID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+        echo "<td><a  href=\"aeroplaneEdit.php?id=$row[aeroplaneID]\">Edit</a>  <a class='btn--danger' href=\"aeroplaneDelete.php?id=$row[aeroplaneID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
            
     }
     ?>

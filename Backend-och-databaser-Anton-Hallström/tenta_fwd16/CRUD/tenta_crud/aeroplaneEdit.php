@@ -3,20 +3,21 @@ include_once("config.php");
 session_start();
 if(empty($_SESSION['email'])) {
    header("location:index.php");
-}
+} 
 echo "Welcome ".$_SESSION['name'];
 
     $id = $_GET['id']; 
     // FETCH all values from table where the SELECTED ID match the ID in table
-    $sql = "SELECT * FROM aeroplane WHERE planeMakerID=:planeMakerID"; 
+    $sql = "SELECT * FROM aeroplane WHERE aeroplaneID=:aeroplaneID"; 
     $query = $conn->prepare($sql); 
-    $query->execute(array(':planeMakerID' => $id)); 
+    $query->execute(array(':aeroplaneID' => $id)); 
 
 while($row = $query->fetch()) { 
     // cache the values from table in variables
     $aeroplanename = $row['aeroplaneName'];
     $aeroplanetopspeed = $row['aeroplaneTopSpeed'];
     $aeroplanerange = $row['aeroplaneRange'];
+    
     // FK_ in table
     $planemakerid = $row['planeMakerID'];   
 }
@@ -28,6 +29,7 @@ if(isset($_POST['update'])) {
     $aeroplanename = $_POST['aeroplanename'];
     $aeroplanetopspeed = $_POST['aeroplanetopspeed'];
     $aeroplanerange = $_POST['aeroplanerange'];
+    $aeroplaneid = $_POST['aeroplaneid'];
 // FK_ in table
     $planemakerid = $_POST['planemakerid'];
 
@@ -51,10 +53,10 @@ if(empty($aeroplanename) || empty($planemakerid) || empty($aeroplanetopspeed) ||
             echo "<font color='red'>Range field is empty.</font><br/>";
         }
 } else { 
-    $sql = "UPDATE aeroplane SET aeroplaneName=:aeroplanename, aeroplaneTopSpeed =:aeroplanetopspeed, aeroplaneRange =:aeroplanerange WHERE planeMakerID=:planemakerid";
+    $sql = "UPDATE aeroplane SET aeroplaneName=:aeroplanename, aeroplaneTopSpeed =:aeroplanetopspeed, aeroplaneRange =:aeroplanerange, planeMakerID =:planemakerid WHERE aeroplaneID=:id";
  
     $query = $conn->prepare($sql); 
-
+    $query->bindparam(':id', $id);
     $query->bindparam(':aeroplanename', $aeroplanename);
     $query->bindparam(':aeroplanetopspeed', $aeroplanetopspeed);
     $query->bindparam(':aeroplanerange', $aeroplanerange);
@@ -106,7 +108,7 @@ while($planemaker = $planeMakerQuery->fetch()) {
         echo "<option value=\"{$planemaker['planeMakerID']}\" selected>{$planemaker['planeMakerName']}</option>"; 
     } else { 
         echo "<option value=\"{$planemaker['planeMakerID']}\">{$planemaker['planeMakerName']}</option>"; 
-    } 
+    }  
 }   
 ?> 
                             </select></td> 

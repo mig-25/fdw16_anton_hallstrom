@@ -7,7 +7,7 @@ $servername = '83.168.227.23';
 $username = 'u1164707_AntonH';
 $password = 'kB8[uus:g{';
 $dbname = 'db1164707_AntonH';
-    
+     
     
 try { 
    

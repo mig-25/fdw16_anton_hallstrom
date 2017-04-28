@@ -5,7 +5,7 @@ if(empty($_SESSION['email'])) {
     header("location:index.php");
 }
 echo "Welcome ".$_SESSION['name'];
- 
+  
     $id = $_GET['id'];
     // FETCH all values from table where the SELECTED ID match the ID in table
     $sql = "SELECT * FROM plane_maker WHERE planeMakerID=:planeMakerID";
