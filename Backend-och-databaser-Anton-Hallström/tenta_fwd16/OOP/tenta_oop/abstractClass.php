@@ -4,7 +4,7 @@
 /* with a constructor passing the protected properties */
 
 abstract class Aircraft {
-       
+        
     const CONSTANT = "Refueling charter";
     public static $pubstaticvariable = "example public static";
     private static $staticvariable = "WARNING!!! Boogie 9 oclock, Angels 5";

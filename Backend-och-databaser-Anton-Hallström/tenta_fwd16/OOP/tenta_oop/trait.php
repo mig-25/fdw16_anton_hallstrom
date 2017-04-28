@@ -7,7 +7,7 @@ trait TreFuel {
     public function reFuel(){
         echo "<h4>" . $this->str . "</h4>";
     } 
-}
+} 
  
  
 

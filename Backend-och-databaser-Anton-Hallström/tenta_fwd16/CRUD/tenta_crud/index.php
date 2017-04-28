@@ -7,7 +7,7 @@ session_start();
 /* Checks if SIGNUP button was used   */
 /* Using md5 to cryptize the password */
 /* Signup, Signin, with table: users  */ 
-
+  
 if(isset($_POST['signup'])){ 
       
     $name = $_POST['name'];

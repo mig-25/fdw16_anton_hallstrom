@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <title>tenta_oop</title> 
     </head>
-    <body>
+    <body> 
         <?php 
         /* Placeholders for new object s */
         $Interceptor1;   

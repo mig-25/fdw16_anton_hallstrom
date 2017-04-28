@@ -13,7 +13,7 @@ require_once ("trait.php");
 class Interceptor extends Aircraft implements Itexaco  {
    
     use TreFuel;
-    
+     
     public $missiles;
     
     
